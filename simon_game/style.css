@@ -50,3 +50,11 @@ h1, h2{
 .userFlash{
     background-color: #38CF38;
 }
+
+.redBlink{
+    color: red;
+}
+
+.over{
+    background-color: red;
+}

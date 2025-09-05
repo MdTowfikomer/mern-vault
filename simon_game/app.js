@@ -1,5 +1,5 @@
 let btnsClass = ["box1", "box2", "box3", "box4"];
-
+let body = document.querySelector('body');
 let gameStart = false;
 let level = 0;
 
@@ -26,6 +26,14 @@ function userFlash(btn){
     }, 250);
 }
 
+function overBackground(btn){
+    btn.classList.add("over");
+    setTimeout(function(){
+        btn.classList.remove("over");
+    }, 250);
+}
+
+
 let heading = document.querySelector('h2'); //class id elementname
 
 let gameSeq = [];
@@ -38,17 +46,33 @@ function levelUp(){
     userSeq = [];
     level++;
     
-    if(level == 1){
-        para.innerText = "click the flashed button..!";
-    } else if(level == 2){
-        para.innerText = "repeat the pattern from start...";
-    } else if(level == 3){
-        para.innerText = "Nice your doing good!";
-    } else if(level > 4 && level%2 == 0){
-            para.innerText = "Keep going..!";
-    } else{
-            para.innerText = "Nice Let's goo..!";
+if (level === 1) {
+  para.innerText = "Click the flashed button…!";
+} 
+else if (level === 2) {
+  para.innerText = "Repeat the pattern from start…";
+  // blink red 3 times
+  let count = 0;
+  const blinkId = setInterval(() => {
+    para.classList.toggle("redBlink");
+    count++;
+    if (count > 10) {         // toggle 6 times (~3 blinks)
+      clearInterval(blinkId);
+      para.classList.remove("redBlink");
     }
+  }, 200);
+} 
+else if (level === 3) {
+  para.style.color = "black";
+  para.innerText = "Nice, you're doing good!";
+} 
+else if (level > 4 && level % 2 === 0) {
+  para.innerText = "Keep going…!";
+} 
+else {
+  para.innerText = "Nice, let's go…!";
+}
+
 
     heading.innerText = `level ${level}`;
     let ranIdx = Math.floor(Math.random() * 2);
@@ -66,16 +90,12 @@ function check(idx){
            setTimeout(levelUp(), 1500);
        } 
     } else{
-        setTimeout(function(){
-            heading.innerText = "GAME OVER! press any key to restart";
-            heading.style.color = "black";
-        }, 300);
         heading.innerText = "GAME OVER! press any key to restart";
+        heading.style.color = "black";
         para.innerHTML = "";
-        heading.style.color = "red";
-        console.log(userSeq);
-        Object
-        resize();
+
+        overBackground(body);
+        restart();
 
     }
 }
@@ -97,7 +117,7 @@ for(btn of btns){
     btn.addEventListener('click', buttonPress);
 }
 
-function resize(){
+function restart(){
     gameStart = false;
     level = 0;
     gameSeq = [];
