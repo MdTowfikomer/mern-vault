@@ -5,6 +5,8 @@ const port = 3000;
 const mongoose = require("mongoose");
 const path = require("path");
 const Chat = require("./models/chat.js");
+const ExpressError = require("./expressError.js");
+
 //ejs setup
 app.set("view engine", "ejs");
 
@@ -17,7 +19,7 @@ app.use(methodOverride("_method"));
 
 // mongoDB setup
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/chatapp')
+    await mongoose.connect('mongodb://127.0.0.1:27017/fakeChatApp')
 }
 main()
 .then((res)=>{
@@ -34,17 +36,22 @@ app.get("/", (req, res)=>{
 })
 
 // index route
-app.get("/chats", async (req,res)=>{
-    let chats = await Chat.find(); // retrieve all the data from the DB
-    res.render("index", {chats});
+app.get("/chats", async (req,res,next)=>{
+    try{
+        let chats = await Chat.find(); // retrieve all the data from the DB
+        res.render("index", {chats});
+    }catch(err){
+        next(err);
+    }
 });
 
 // insert Chat route
 app.get("/chats/new", (req,res)=>{
+    // throw new ExpressError(404,"page not found");
     res.render("new");
 });
 
-app.post("/chats", async (req, res) => {
+app.post("/chats", async (req, res,next) => {
     try {
         const { to, from, message } = req.body;
         const newChat = new Chat({
@@ -56,9 +63,27 @@ app.post("/chats", async (req, res) => {
         await newChat.save();
         res.redirect("/chats");
     } catch (err) {
-        console.error(err);
+        next(err);
     }
 });
+
+// show route
+app.get("/chats/:id", async(req,res,next)=>{
+    try {
+        let {id} = req.params;
+        let chat = await Chat.findById(id);
+        if(!chat){
+            // throw new ExpressError(500, "Chat not found");
+            next(new ExpressError(404, "Chat not found"));
+        }
+        res.render("show", {chat});
+    } catch (err) {
+        next(err);
+    }
+});
+
+
+
 
 // update route
 app.get("/chats/:id/edit",async (req,res)=>{
@@ -67,7 +92,7 @@ app.get("/chats/:id/edit",async (req,res)=>{
         let chat = await Chat.findById(id);
         res.render("edit", {chat});
     }catch(err){
-        console.log(err);
+        next(err);
     }
 });
 
@@ -83,8 +108,7 @@ app.put("/chats/:id", async(req,res)=>{
             res.status(404).send("chat not found");
         }
     }catch(err){
-        console.log(err);
-        res.status(500).send("An error occurred while updating the chat.");
+        next(err);
     }
 });
 
@@ -100,10 +124,15 @@ app.delete("/chats/:id",async(req,res)=>{
         console.log("Message Deleted..!");
         res.redirect("/chats");
     }catch(err){
-        console.log(err);
+        next(err);
     }
 });
 
+// Error handling midddleware
+app.use((err,req,res,next)=>{
+    let {status=502, message="Found some error"} = err;
+    res.status(status).send(message);
+});
 
 app.listen(port, (req,res)=>{
     console.log(`Server is running at localhost ${port}`);

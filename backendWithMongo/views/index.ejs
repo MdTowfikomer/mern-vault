@@ -14,7 +14,8 @@
         <p>From: <i><%= chat.from %></i> </p>
         <p class="message"> <%= chat.message %></p>
         <div class="links">
-            <a href="http://127.0.0.1:3000/chats/<%=chat.id%>/edit" >edit</a> 
+            <a href="http://127.0.0.1:3000/chats/<%=chat.id%>" >show</a> &nbsp;
+            <a href="http://127.0.0.1:3000/chats/<%=chat.id%>/edit" >edit</a> &nbsp;
             <form action="/chats/<%=chat.id%>?_method=DELETE" method="post">
               <button>Delete</button>
             </form>
