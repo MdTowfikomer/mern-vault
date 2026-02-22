@@ -1,0 +1,228 @@
+{
+    "userSelection": {
+        "location": "Delhi",
+        "days": "3",
+        "budget": "Cheapest",
+        "traveler": "2 to 4 People"
+    },
+    "tripData": {
+        "hotelOptions": [
+            {
+                "hotelName": "Hotel Ajanta",
+                "hotelAddress": "8647, Arakashan Rd, Chuna Mandi, Paharganj, New Delhi, Delhi 110055",
+                "price": "INR 1,200 - 2,500 per night",
+                "hotelImageUrl": "https://example.com/hotel_ajanta.jpg",
+                "geoCoordinates": {
+                    "latitude": 28.6496,
+                    "longitude": 77.2104
+                },
+                "rating": 3.5,
+                "description": "A well-known budget hotel in the bustling Paharganj area, offering basic amenities, clean rooms, and excellent connectivity to major attractions via New Delhi Railway Station and Metro."
+            },
+            {
+                "hotelName": "Hotel Godwin Deluxe",
+                "hotelAddress": "8591, Arakashan Rd, Chuna Mandi, Paharganj, New Delhi, Delhi 110055",
+                "price": "INR 1,000 - 2,200 per night",
+                "hotelImageUrl": "https://example.com/hotel_godwin_deluxe.jpg",
+                "geoCoordinates": {
+                    "latitude": 28.6495,
+                    "longitude": 77.2106
+                },
+                "rating": 3.4,
+                "description": "Another popular budget option in Paharganj, providing comfortable stays with essential facilities, ideal for travelers seeking affordability and easy access to public transport and markets."
+            },
+            {
+                "hotelName": "Bloomrooms @ Janpath",
+                "hotelAddress": "7 Link Road, Block B, Connaught Place, New Delhi, Delhi 110001",
+                "price": "INR 1,800 - 3,500 per night",
+                "hotelImageUrl": "https://example.com/bloomrooms_janpath.jpg",
+                "geoCoordinates": {
+                    "latitude": 28.6277,
+                    "longitude": 77.2198
+                },
+                "rating": 4,
+                "description": "A modern, minimalist budget hotel located centrally near Connaught Place and Janpath Market, offering clean, compact rooms and good service, perfect for exploring the city."
+            }
+        ],
+        "itinerary": {
+            "days": [
+                {
+                    "day": 1,
+                    "theme": "Old Delhi Charm & Central Vista",
+                    "plan": [
+                        {
+                            "placeName": "Red Fort (Exterior View & Surrounding Market)",
+                            "placeDetails": "Start your day with a visit to the iconic Red Fort. For a budget trip, you can admire its magnificent architecture from the outside and explore the surrounding Meena Bazaar for local goods.",
+                            "placeImageUrl": "https://example.com/red_fort.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.6562,
+                                "longitude": 77.241
+                            },
+                            "ticketPricing": "Exterior view: Free; Entry for Indians: INR 35, Foreigners: INR 500",
+                            "timeTravel": "1.5-2 hours",
+                            "bestTimeToVisit": "Morning (9 AM - 11 AM)"
+                        },
+                        {
+                            "placeName": "Jama Masjid",
+                            "placeDetails": "Walk to Jama Masjid, one of India's largest mosques. Explore its grand courtyard and architecture. Remember to dress modestly.",
+                            "placeImageUrl": "https://example.com/jama_masjid.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.6507,
+                                "longitude": 77.2334
+                            },
+                            "ticketPricing": "Free (Camera fee: INR 300 for foreigners, optional)",
+                            "timeTravel": "1-1.5 hours",
+                            "bestTimeToVisit": "Morning (avoid prayer times)"
+                        },
+                        {
+                            "placeName": "Chandni Chowk & Street Food",
+                            "placeDetails": "Dive into the vibrant lanes of Chandni Chowk. Explore various markets like Dariba Kalan (jewellery), Kinari Bazaar (wedding items), and Parathe Wali Gali for budget-friendly, delicious street food.",
+                            "placeImageUrl": "https://example.com/chandni_chowk_food.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.6563,
+                                "longitude": 77.2299
+                            },
+                            "ticketPricing": "Food costs: INR 100-300 per person",
+                            "timeTravel": "2-3 hours",
+                            "bestTimeToVisit": "Lunchtime onwards"
+                        },
+                        {
+                            "placeName": "India Gate & Rashtrapati Bhavan (Exterior)",
+                            "placeDetails": "Take a metro/bus to India Gate, a war memorial. Enjoy a leisurely walk around the monument. Continue to view the majestic Rashtrapati Bhavan (Presidential Palace) from a distance along Rajpath.",
+                            "placeImageUrl": "https://example.com/india_gate.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.6129,
+                                "longitude": 77.2295
+                            },
+                            "ticketPricing": "Free",
+                            "timeTravel": "1.5-2 hours",
+                            "bestTimeToVisit": "Late Afternoon/Evening"
+                        },
+                        {
+                            "placeName": "Connaught Place (CP)",
+                            "placeDetails": "End your day at Connaught Place, a hub for shopping, dining, and entertainment. Enjoy window shopping, observe the colonial architecture, and find budget-friendly eateries or street food options.",
+                            "placeImageUrl": "https://example.com/connaught_place.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.6304,
+                                "longitude": 77.2177
+                            },
+                            "ticketPricing": "Free to explore, food costs extra",
+                            "timeTravel": "2-3 hours",
+                            "bestTimeToVisit": "Evening"
+                        }
+                    ]
+                },
+                {
+                    "day": 2,
+                    "theme": "Historical Wonders & Spiritual Serenity",
+                    "plan": [
+                        {
+                            "placeName": "Humayun's Tomb",
+                            "placeDetails": "Visit Humayun's Tomb, a UNESCO World Heritage site and a precursor to the Taj Mahal. Its stunning Mughal architecture is a must-see.",
+                            "placeImageUrl": "https://example.com/humayuns_tomb.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.5933,
+                                "longitude": 77.2589
+                            },
+                            "ticketPricing": "Indians: INR 40, Foreigners: INR 600",
+                            "timeTravel": "1.5-2 hours",
+                            "bestTimeToVisit": "Morning (9 AM - 11 AM)"
+                        },
+                        {
+                            "placeName": "Qutub Minar",
+                            "placeDetails": "Head to Qutub Minar, another UNESCO World Heritage site. Explore the tall minaret, Quwwat-ul-Islam Mosque, and the Iron Pillar.",
+                            "placeImageUrl": "https://example.com/qutub_minar.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.5244,
+                                "longitude": 77.1855
+                            },
+                            "ticketPricing": "Indians: INR 40, Foreigners: INR 600",
+                            "timeTravel": "1.5-2 hours",
+                            "bestTimeToVisit": "Late Morning/Afternoon"
+                        },
+                        {
+                            "placeName": "Lotus Temple",
+                            "placeDetails": "Visit the Baháʼí House of Worship, popularly known as the Lotus Temple due to its distinctive flower-like shape. Enjoy the serene atmosphere and beautiful gardens.",
+                            "placeImageUrl": "https://example.com/lotus_temple.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.5535,
+                                "longitude": 77.2588
+                            },
+                            "ticketPricing": "Free",
+                            "timeTravel": "1-1.5 hours",
+                            "bestTimeToVisit": "Afternoon"
+                        },
+                        {
+                            "placeName": "Hauz Khas Village",
+                            "placeDetails": "Explore the historic Hauz Khas Village. Wander through the ruins of Feroz Shah Tughlaq's tomb and madrasa, overlooking the ancient reservoir. The village itself has many cafes, but you can enjoy the historical park for free.",
+                            "placeImageUrl": "https://example.com/hauz_khas_village.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.5526,
+                                "longitude": 77.195
+                            },
+                            "ticketPricing": "Free (for the monument park)",
+                            "timeTravel": "1.5-2 hours",
+                            "bestTimeToVisit": "Late Afternoon/Evening"
+                        }
+                    ]
+                },
+                {
+                    "day": 3,
+                    "theme": "Spiritual & Cultural Delights",
+                    "plan": [
+                        {
+                            "placeName": "Gurudwara Bangla Sahib",
+                            "placeDetails": "Start your day with a visit to Gurudwara Bangla Sahib, a prominent Sikh house of worship. Experience the peaceful atmosphere, listen to the Gurbani (hymns), and witness the community kitchen (Langar) in action.",
+                            "placeImageUrl": "https://example.com/gurudwara_bangla_sahib.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.6264,
+                                "longitude": 77.2135
+                            },
+                            "ticketPricing": "Free (donations welcome; free langar meal available)",
+                            "timeTravel": "1-1.5 hours",
+                            "bestTimeToVisit": "Morning"
+                        },
+                        {
+                            "placeName": "Agrasen ki Baoli",
+                            "placeDetails": "Discover Agrasen ki Baoli, an ancient stepwell with 103 steps. It's an architectural marvel and a quiet escape from the city hustle.",
+                            "placeImageUrl": "https://example.com/agrasen_ki_baoli.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.627,
+                                "longitude": 77.2248
+                            },
+                            "ticketPricing": "Free",
+                            "timeTravel": "45 min - 1 hour",
+                            "bestTimeToVisit": "Late Morning"
+                        },
+                        {
+                            "placeName": "Dilli Haat (INA)",
+                            "placeDetails": "Visit Dilli Haat, an open-air market offering handicrafts, food, and cultural performances from various Indian states. It's a great place for souvenir shopping and trying diverse Indian cuisines at reasonable prices.",
+                            "placeImageUrl": "https://example.com/dilli_haat.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.5684,
+                                "longitude": 77.2084
+                            },
+                            "ticketPricing": "Entry fee: INR 30-50 per person (Indians), INR 100 (Foreigners)",
+                            "timeTravel": "2-3 hours",
+                            "bestTimeToVisit": "Afternoon"
+                        },
+                        {
+                            "placeName": "Departure",
+                            "placeDetails": "Head to Delhi Airport (DEL) or your respective railway/bus station for your onward journey, carrying memories of your budget-friendly Delhi adventure. Utilize the Delhi Metro Airport Express Line for a quick and cheap transfer to the airport.",
+                            "placeImageUrl": "https://example.com/delhi_airport.jpg",
+                            "geoCoordinates": {
+                                "latitude": 28.5562,
+                                "longitude": 77.1
+                            },
+                            "ticketPricing": "Metro fare: Approx. INR 60-100",
+                            "timeTravel": "2-3 hours (Travel & Check-in)",
+                            "bestTimeToVisit": "Evening"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "user": null,
+    "id": "1771615841302"
+}
